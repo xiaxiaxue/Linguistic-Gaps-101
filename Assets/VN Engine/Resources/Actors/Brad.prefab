@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 11486432}
   - component: {fileID: 11430486}
   m_Layer: 5
-  m_Name: University Representative
+  m_Name: Brad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -104,17 +104,17 @@ RectTransform:
   m_GameObject: {fileID: 179750}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 22416060}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 2475, y: 2533}
+  m_SizeDelta: {x: 895.00006, y: 1750}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &22291842
 CanvasRenderer:
@@ -166,8 +166,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59ca6937d41114c4f8d9532b288dcbc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actor_name: University Representative
-  position: 2
+  actor_name: Brad
+  position: 0
   custom_position: {fileID: 0}
   rect: {fileID: 0}
   desired_position: {x: 0, y: 0, z: 0}

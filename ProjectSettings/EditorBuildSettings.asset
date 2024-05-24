@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Locations/Green.unity
     guid: fe2773bf450dd8e46b8c3630dfdceec9
+  - enabled: 1
+    path: Assets/Scenes/Locations/Lecture Hall.unity
+    guid: 10acd0347aef15f4694d6f12699e8288
+  - enabled: 1
+    path: Assets/Scenes/Locations/Library.unity
+    guid: 24747dbd28f78c241b44952e51a49e33
   - enabled: 0
     path: Assets/Scenes/Archive/Intro.unity
     guid: 75b305b9e3f6a5649b1176a62a7bb3cf
@@ -20,7 +26,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Archive/In The Text.unity
     guid: 192438921b64b6440a49b05267836cd4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Corkboard.unity
     guid: a1ffe95de50f2a140aee3f07a04a4c49
   - enabled: 0

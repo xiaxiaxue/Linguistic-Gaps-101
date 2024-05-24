@@ -15,8 +15,15 @@ public class Location : MonoBehaviour
 
     public void GoToLocation()
     {
-//        PlayerPrefs.SetString("Current Conversation", conversation);
-        StatsManager.Add_To_Numbered_Stat("Minutes Passed", minutes);
+        //        PlayerPrefs.SetString("Current Conversation", conversation);
+        if (StatsManager.Boolean_Stat_Exists("Minutes Passed"))
+        {
+            StatsManager.Add_To_Numbered_Stat("Minutes Passed", minutes);
+        }
+        else
+        {
+            StatsManager.Set_Numbered_Stat("Minutes Passed", minutes);
+        }
         SceneManager.LoadScene(scene);
 
     }
