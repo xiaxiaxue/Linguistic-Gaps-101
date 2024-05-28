@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Main.unity
     guid: fe418f2d466421c4e99dc2976b918781
   - enabled: 1
+    path: Assets/Scenes/Locations/Small Classroom.unity
+    guid: d7b1baa033b3dde49a5e9d3cc82b9df8
+  - enabled: 1
     path: Assets/Scenes/Locations/Green.unity
     guid: fe2773bf450dd8e46b8c3630dfdceec9
   - enabled: 1
@@ -17,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Locations/Library.unity
     guid: 24747dbd28f78c241b44952e51a49e33
+  - enabled: 1
+    path: Assets/Scenes/Locations/Dining Hall.unity
+    guid: d382c940d95bb434191ce2d7a572c094
   - enabled: 0
     path: Assets/Scenes/Archive/Intro.unity
     guid: 75b305b9e3f6a5649b1176a62a7bb3cf

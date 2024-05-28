@@ -8,7 +8,7 @@ using VNEngine;
 public class Location : MonoBehaviour
 {
     public string scene;
-    public string conversation;
+//    public string conversation;
     public string timestamp;
     public int minutes;
     public bool played = false;
