@@ -23,5 +23,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Locations/Dining Hall.unity
     guid: d382c940d95bb434191ce2d7a572c094
+  - enabled: 1
+    path: Assets/Scenes/Cutscene.unity
+    guid: 843dd3afc44fe104db0ecf888a45d1bf
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: cda1e3a2e355758429d8831ec2bf6824, type: 2}
