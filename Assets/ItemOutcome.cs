@@ -14,51 +14,69 @@ public class ItemOutcome : MonoBehaviour
     public float GPA = 4.0f; //not in use
     public FriendRelationship[] friendRelationships; //changes in friend relationships
     public int minutesElapsed; //time added to the game clock
-    public GameObject nextLocation; //the object to activate when this one hides itsel
+    public FindObject searchLocation; //the object to activate when this one hides itself
+    public bool collectable = false;
 
     private Button button;
     // Called initially when the node is run, put most of your logic here
+    void Start()
+    {
+        button = GetComponent<Button>();
+        button.onClick.AddListener(OnButtonClick);
+
+    }
     public void OutcomeAchieved()
     {
-        Debug.Log("Clicked on Outcome Item");
+        Debug.Log("Clicked on Outcome Item: " + title);
+
         int minutesPassed = PlayerPrefs.GetInt("Minutes Passed", 0);
         minutesPassed += minutesElapsed;
         PlayerPrefs.SetInt("Minutes Passed", minutesPassed);
-        StatsManager.Add_To_Numbered_Stat("Items Collected", 1);
-        StatsManager.Add_To_Numbered_Stat("Minutes Passed", minutesPassed);
-        if (title.Length > 0)
+        if(collectable)
         {
-            //LOCATION as title for search
-            StatsManager.Set_Boolean_Stat(title, true);
+            if (StatsManager.Numbered_Stat_Exists("Items Collected"))
+            {
+                StatsManager.Add_To_Numbered_Stat("Items Collected", 1);
+            }
+            else
+            {
+                StatsManager.Set_Numbered_Stat("Items Collected", 1);
+            }
+
+            if (title.Length > 0)
+            {
+                //Can be checked to see if it's been collected.
+                StatsManager.Set_Boolean_Stat(title, true);
+                Debug.Log(title + " stat set to " + StatsManager.Get_Boolean_Stat(title));
+            }
 
         }
+        if(StatsManager.Numbered_Stat_Exists("Minutes Passed"))
+        {
+            StatsManager.Add_To_Numbered_Stat("Minutes Passed", minutesPassed);
+        }
+        else
+        {
+            StatsManager.Set_Numbered_Stat("Minutes Passed", minutesPassed);
+        }
+
         for (int i = 0; i < friendRelationships.Length; i++)
         {
             StatsManager.Set_Numbered_Stat(friendRelationships[i].friend, (int)friendRelationships[i].relationship);
         }
-
-        if(nextLocation)
-        {
-            nextLocation.SetActive(true);
-            Next();
-        }
-
+        Next();
 
     }
 
     public void Next()
     {
-        if(transform.parent.parent.GetComponentInParent<FindObject>())
+
+        if (searchLocation)
         {
-            transform.parent.parent.GetComponentInParent<FindObject>().Found(this);
+            searchLocation.Found(this);
         }
     }
 
-    void Awake()
-    {
-        button = GetComponent<Button>();
-        button.onClick.AddListener(OnButtonClick);
-    }
     private void OnButtonClick()
     {
         OutcomeAchieved();

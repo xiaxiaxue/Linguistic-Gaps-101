@@ -69,7 +69,9 @@ namespace VNEngine
         // Do any necessary cleanup here
         public override void Finish_Node()
         {
+            VNSceneManager.Waiting_till_true = true;
             thought.gameObject.SetActive(false);
+            Debug.Log("Waiting is over, setting true: " + gameObject.name);
             base.Finish_Node();
         }
     }
