@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Map : MonoBehaviour
 {
@@ -12,6 +14,16 @@ public class Map : MonoBehaviour
     void Start()
         
     {
+        for(int i = 0; i < locations.Count; i++)
+        {
+            if(SceneManager.GetActiveScene().name == locations[i].scene)
+            {
+                locations[i].GetComponent<Button>().enabled = false;
+
+            }
+        }
+        //locations = new List<Location>();
+        //locations = GetComponentsInChildren<Location>();
 //        System.DateTime.Now.ToShortTimeString()
 //        timestamp = Time.time;
     }

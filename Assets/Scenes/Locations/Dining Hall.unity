@@ -4847,6 +4847,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Thinking
       objectReference: {fileID: 0}
+    - target: {fileID: 8583522059737696776, guid: 1a88f5cad8ead9a4fbb8455fe124c4be, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8604151517400413449, guid: 1a88f5cad8ead9a4fbb8455fe124c4be, type: 3}
       propertyPath: m_RootOrder
       value: 11
